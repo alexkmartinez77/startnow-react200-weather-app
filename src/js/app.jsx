@@ -1,8 +1,8 @@
 import React from 'react';
-import CityInfo from './components/CityInfo/CityInfo';
-import SearchHx from './components/SearchHx/SearchHx';
-import SearchBar from './components/SearchBar/SearchBar';
-import Prepopulated from './components/Prepopulated/Prepopulated';
+import CityInfo from './components/CityInfo';
+import SearchHx from './components/SearchHx';
+import SearchBar from './components/SearchBar';
+import Prepopulated from './components/Prepopulated';
 
 export default class App extends React.Component {
   render() {
