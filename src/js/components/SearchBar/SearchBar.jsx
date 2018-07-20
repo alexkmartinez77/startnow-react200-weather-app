@@ -1,14 +1,38 @@
 import React from 'react';
+import { updateLocationName, getWeather } from './searchBarActions.js';
 
 export default class SearchBar extends React.Component{
+    constructor(props){
+        super(props);
+
+    this.handleNewLocation = this.handleNewLocation.bind(this);
+    this.handleGetWeather = this.handleGetWeather.bind(this);    
+    }
+
+handleNewLocation(e){
+    const { dispatch } = this.props;
+    const location = e.target.value;
+    dispatch(updateLocationName(location));
+};
+
+handleGetWeather(){
+    const { dispatch } = this.props;
+    const location = this.props.location;
+    dispatch(getWeather(location));
+}
 
 render(){
+    const { location } = this.props;
     return(
     <div>
-        <div class="input-group">
-        <span class="input-group-addon" id="sizing-addon1"></span>
-        <input type="text" class="form-control" placeholder="Enter Location" aria-describedby="sizing-addon2"></input>
-        <button type='button' type="button" class="btn btn-light">GO!</button>
+        <div className="input-group">
+        <input type="text" 
+        className="form-control" 
+        aria-describedby="sizing-addon3"
+        value={ location }
+        onChange={ this.handleNewLocation }>
+        </input>
+        <button type='button' class="btn btn-light" onClick={this.handleGetWeather}>GO!</button>
         </div>
 
     </div>
