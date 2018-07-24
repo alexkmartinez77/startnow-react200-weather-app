@@ -8,21 +8,17 @@ export default class SearchHx extends React.Component{
             <div className='card border-primary mb-3'>
             <div className='card-header text-white bg-primary'>Search History</div>
             <div className='card-body'>
-            <table>
+            <table className="table table-striped">
+                <tbody>
                { searchHistory.map((searched) =>
                 <tr>
-                    <tr>
                         <td>{searched.location}</td>
-                        <td>{searched.date}</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>{searched.time}</td>
-                    </tr>  
+                        <td className='text-right'>{searched.date}     {searched.time}</td>
                 </tr>
   
                 )
             }
+                </tbody>
             </table>
             </div>
           </div>

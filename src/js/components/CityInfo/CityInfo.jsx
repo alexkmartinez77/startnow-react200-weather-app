@@ -9,20 +9,21 @@ render(){
         <div className='card border-primary mb-3'>
         <div className='card-header text-white bg-primary'>City Information</div>
         <div className='card-body'>
-          <table>
+          <table className='text-center'>
               <tbody>
-                <tr>
-                    <td><h2>{ location }</h2></td>
+                <tr className='text-center'>
+                    <td colSpan='3'><h2>{ location }</h2></td>
                 </tr>
                 <tr>
-                     <td>Latitude/Longitude: {lat}, {lon} </td>                
+                     <td colSpan='3'>Latitude/Longitude: {lat}, {lon} </td>                
                 </tr>
                 <tr>
                   <th>Temperature (F)</th>
                   <th>Pressure</th>
                   <th>Humidity</th>
                 </tr>
-                <tr>
+
+                <tr className='text-success'>
                     <td>{ temp }</td>
                     <td>{ press }</td>
                     <td>{ hum }</td>
@@ -37,7 +38,7 @@ render(){
                   <th>Highest Temp (F)</th>
                   <th>Wind Speed</th>
                 </tr>
-                <tr>
+                <tr className='text-success'>
                     <td>{ low }</td>
                     <td>{ high }</td>
                     <td>{ wind }</td>
