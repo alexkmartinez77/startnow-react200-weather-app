@@ -1,3 +1,13 @@
+import { connect } from 'react-redux';
 import SearchHx from './SearchHx';
 
-export default SearchHx;
+function mapStoreToProps(store) {
+    return {
+      searchHistory: store.search.searchHistory,
+    };
+  }
+export default connect(mapStoreToProps)(SearchHx);
+
+
+
+

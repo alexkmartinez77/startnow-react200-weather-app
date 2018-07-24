@@ -1,5 +1,5 @@
 import React from 'react';
-import { updateLocationName, getWeather } from './searchBarActions.js';
+import { updateLocationName, getWeather} from './searchBarActions';
 
 export default class SearchBar extends React.Component{
     constructor(props){
@@ -32,7 +32,7 @@ render(){
         value={ location }
         onChange={ this.handleNewLocation }>
         </input>
-        <button type='button' class="btn btn-light" onClick={this.handleGetWeather}>GO!</button>
+        <button type='button' className="btn btn-light" onClick={this.handleGetWeather}>GO!</button>
         </div>
 
     </div>

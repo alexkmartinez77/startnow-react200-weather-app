@@ -4,18 +4,18 @@ export default class CityInfo extends React.Component{
     
 
 render(){
-    const { location, lon, lat, temp, press, hum, low, high, wind} = this.props;
+    const { location, lon, lat, temp, press, hum, low, high, wind } = this.props;
     return(
         <div className='card border-primary mb-3'>
         <div className='card-header text-white bg-primary'>City Information</div>
         <div className='card-body'>
-          <table border="1">
+          <table>
+              <tbody>
                 <tr>
                     <td><h2>{ location }</h2></td>
                 </tr>
                 <tr>
-                     <td>Latitude/Longitude: {lat}, {lon} </td>
-                   
+                     <td>Latitude/Longitude: {lat}, {lon} </td>                
                 </tr>
                 <tr>
                   <th>Temperature (F)</th>
@@ -42,6 +42,7 @@ render(){
                     <td>{ high }</td>
                     <td>{ wind }</td>
                 </tr>
+                </tbody>
             </table>
         </div>
       </div>

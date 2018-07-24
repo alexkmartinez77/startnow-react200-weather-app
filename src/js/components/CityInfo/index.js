@@ -11,7 +11,8 @@ function mapStoreToProps(store) {
       hum: store.search.hum,
       low: store.search.low,
       high: store.search.high,
-      wind: store.search.wind
+      wind: store.search.wind,
+      time: store.search.time
     };
   }
 export default connect(mapStoreToProps)(CityInfo);

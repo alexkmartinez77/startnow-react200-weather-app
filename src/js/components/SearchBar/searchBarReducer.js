@@ -8,14 +8,13 @@ const defaultState = {
     low: '',
     high: '',
     wind: '',
+    date: '',
+    time: '',
     searchHistory: []
 };
 
 export default function SearchBarReducer(state = defaultState, action){
     const { type, payload } = action;
-    //console.log('type: '+ type);
-    //console.log('payload: ' + payload);
-    //console.log(payload);
     switch (type) {
         // Here in the case of the update description action 
         case 'UPDATE_LOCATION_NAME': {
@@ -28,9 +27,23 @@ export default function SearchBarReducer(state = defaultState, action){
           };
         }
 
-        case 'GET_WEATHER_FULFILLED': {
+        case 'GET_WEATHER_PENDING': {
           return {
             ...state,
+            pending: true, 
+          };
+        }
+
+        case 'GET_WEATHER_FULFILLED': {
+          var currentDate = new Date();
+          var day = currentDate.getDate();
+          var month = currentDate.getMonth() + 1;
+          var year = currentDate.getFullYear();
+          var time = currentDate.toLocaleTimeString();
+
+          return {
+            ...state,
+            location: payload.data.name,
             temp: payload.data.main.temp,
             lon: payload.data.coord.lon,
             lat: payload.data.coord.lat,
@@ -38,9 +51,13 @@ export default function SearchBarReducer(state = defaultState, action){
             hum: payload.data.main.humidity,
             low: payload.data.main.temp_min,
             high: payload.data.main.temp_max,
-            wind: payload.data.wind.speed
+            wind: payload.data.wind.speed,
+            date: month + "/" + day + "/" + year,
+            time: time,
+            searchHistory:[...state.searchHistory, {location: payload.data.name, date: month + "/" + day + "/" + year, time: time}]
           }   
         }
+
         default: {
           return state;
         }
