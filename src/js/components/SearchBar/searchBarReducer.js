@@ -40,7 +40,6 @@ export default function SearchBarReducer(state = defaultState, action){
           var month = currentDate.getMonth() + 1;
           var year = currentDate.getFullYear();
           var time = currentDate.toLocaleTimeString();
-
           return {
             ...state,
             location: payload.data.name,

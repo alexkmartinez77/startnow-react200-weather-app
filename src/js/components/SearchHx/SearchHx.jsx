@@ -14,8 +14,7 @@ export default class SearchHx extends React.Component{
                 <tr>
                         <td>{searched.location}</td>
                         <td className='text-right'>{searched.date}     {searched.time}</td>
-                </tr>
-  
+                </tr> 
                 )
             }
                 </tbody>

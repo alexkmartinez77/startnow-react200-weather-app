@@ -18,11 +18,11 @@ handlePrepopulated(e){
 render(){
     return(
         <div>
-            <button type="button" className="btn btn-primary" value="San Diego" onClick={this.handlePrepopulated}>San Diego</button>
-            <button type="button" className="btn btn-primary" value="New York" onClick={this.handlePrepopulated}>New York</button>
-            <button type="button" className="btn btn-primary" value="Washington DC." onClick={this.handlePrepopulated}>Washington D.C.</button>
-            <button type="button" className="btn btn-primary" value="London" onClick={this.handlePrepopulated}>London</button>
-            <button type="button" className="btn btn-primary" value="Tokyo" onClick={this.handlePrepopulated}>Tokyo</button>
+            <button type="button" className="btn btn-primary mr-1" value="San Diego" onClick={this.handlePrepopulated}>San Diego</button>
+            <button type="button" className="btn btn-primary mr-1" value="New York" onClick={this.handlePrepopulated}>New York</button>
+            <button type="button" className="btn btn-primary mr-1" value="Washington DC." onClick={this.handlePrepopulated}>Washington D.C.</button>
+            <button type="button" className="btn btn-primary mr-1" value="London" onClick={this.handlePrepopulated}>London</button>
+            <button type="button" className="btn btn-primary mr-1" value="Tokyo" onClick={this.handlePrepopulated}>Tokyo</button>
         </div>
     );
     }
