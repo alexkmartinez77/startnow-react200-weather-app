@@ -23,7 +23,7 @@ render(){
             <button type="button" className="btn btn-primary mr-1" value="Washington DC." onClick={this.handlePrepopulated}>Washington D.C.</button>
             <button type="button" className="btn btn-primary mr-1" value="London" onClick={this.handlePrepopulated}>London</button>
             <button type="button" className="btn btn-primary mr-1" value="Tokyo" onClick={this.handlePrepopulated}>Tokyo</button>
-        </div>
+       </div>
     );
     }
 }

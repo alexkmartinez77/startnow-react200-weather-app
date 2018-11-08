@@ -8,31 +8,30 @@ export default class App extends React.Component {
   render() {
     return (
       <div className='container'>
-        <div className='jumbotron'>
-          <h3 className='display-3'>The</h3>
-          <h3 className='display-3'>Weather</h3>
-          <h3 className='display-3'>Channel</h3>
-          <h5>Always know if you will need an umbrella!</h5>
+        <div className='jumbotron mt-4 p-4'>
+          <h3 className='display-4'>The</h3>
+          <h3 className='display-4'>Weather</h3>
+          <h3 className='display-4'>Channel</h3>
+          <h5 className='mt-3'>Always know if you will need an umbrella!</h5>
         </div>
         <div className='row'>
           <div className='col-12 col-md-12 mb-4'>
-            <Prepopulated/>
+            <Prepopulated />
           </div>
         </div>
         <div className='row'>
           <div className='col-12 col-md-12 mb-4'>
-            <SearchBar/>
+            <SearchBar />
           </div>
         </div>
         <div className='row'>
           <div className='col-12 col-md-6 mb-4'>
-            <CityInfo/>
+            <CityInfo />
           </div>
           <div className='col-12 col-md-6 mb-4'>
-            <SearchHx/>
+            <SearchHx />
           </div>
         </div>
-
       </div>
     );
   }
